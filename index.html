@@ -20,25 +20,18 @@
         </div>  
 
         <nav class="header__nav">
-            <ul class="listas">
+            <ul>
                 <li><a href="./index.html">Inicio</a></li>
                 <li><a href="./pages/animes.html">Anime</a></li>
                 <li><a href="./pages/noticias.html">Noticias</a></li>
                 <li><a href="./pages/cronograma.html">Cronograma</a></li>
                 <li><a href="./pages/contacto.html">Contacto</a></li>
             </ul>
-            <ul class="mobile">
-                <li><a href="../index.html">inicio</a></li>
-                <li><a href="./pages/animes.html">Anime</a></li>
-                <li><a href="./pages/contacto.html">Contacto</a></li>
-                <li><a href="./pages/noticias.html">Noticias</a></li>
-                <li><a href="./pages/cronograma.html">cronograma</a></li>
-            </ul>
         </nav>
 
         <div class="header__login">
             <input type="text" placeholder="search">
-            <a href="#" class="boton">Login</a>
+            <a href="#">Login</a>
         </div>
     </header>
 
@@ -46,7 +39,6 @@
 
     <!-- MAIN -->
     <main id="main">
-            <article class="main__section--article"> 
                 <h3>Ultimos estrenos</h3>
                 <div id="carouselExample" class="carousel slide">
                     <div class="carousel-inner">
@@ -69,68 +61,66 @@
                       <span class="visually-hidden">></span>
                     </button>
                   </div>
-               
-            </article>
             <!-- quisiera poner el nombre incrustado en la foto como link -->
-            <article class="main__section--article2">
-                <h3>Animes</h3>
-                <h3 class="titulo">Ultimos estrenos</h3>
-                <div class="article2__img">
-                    <img src="./img/DragonBall.jpeg" alt="goku">
-                    <img src="./img/gurren.jpeg" alt="simon">
-                    <img src="./img/onePunchMan.jpg" alt="saitama">
-                    <img src="./img/naruto.jpg" alt="naruto" >
-                    <img src="./img/one.jpg" alt="luffy" >
-                    <img src="./img/full.jpg" alt="roy"> 
-                </div>
-                <div class="article2__btn">
-                    <a href="./pages/animes.html" class="boton">Ver mas</a>
-                </div>
-            </article>
     </main>
 
     <!-- faltaria poner el nombre arriba de cada imagen -->
     <!-- FIN DEL MAIL -->
 
-    <!-- ASIDE1 -->    
+    <article id="article">
+        <h3 class="article__mobile">Ultimos estrenos</h3>
+        <div class="article__series">
+            <h3>Animes</h3>
+            <div class="article__seriesIMG">
+                <img src="./img/DragonBall.jpeg" alt="goku">
+                <img src="./img/gurren.jpeg" alt="simon">
+                <img src="./img/onePunchMan.jpg" alt="saitama">
+                <img src="./img/naruto.jpg" alt="naruto" >
+                <img src="./img/one.jpg" alt="luffy" >
+                <img src="./img/full.jpg" alt="roy"> 
+            </div>
+        </div>
+        <div class="article__btn">
+            <a href="./pages/animes.html">Ver mas</a>
+        </div>
+    </article>
+
     <aside id="aside">
-        <h3>Programacion de hoy</h3>
-        <article class="aside__tabla" >
-                <div>
-                    <img src="../img/lafy.jpg" alt="luffy" class="luffy">
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, enim!</p>
-                </div>
-                <div>
-                    <img src="../img/lafy.jpg" alt="luffy" class="luffy">
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, enim!</p>
-                </div>
-                <div>
-                    <img src="../img/lafy.jpg" alt="luffy" class="luffy">
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, enim!</p>
-                </div>
-                <div>
-                    <img src="../img/lafy.jpg" alt="luffy" class="luffy">
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, enim!</p>
-                </div>
+        <article class="aside__cronograma" >
+            <h3>Programacion de hoy</h3>
+            <div>
+                <img src="../img/lafy.jpg" alt="luffy" class="luffy">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, enim!</p>
+            </div>
+            <div>
+                <img src="../img/lafy.jpg" alt="luffy" class="luffy">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, enim!</p>
+            </div>
+            <div>
+                <img src="../img/lafy.jpg" alt="luffy" class="luffy">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, enim!</p>
+            </div>
+            <div>
+                <img src="../img/lafy.jpg" alt="luffy" class="luffy">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, enim!</p>
+            </div>
+            <div class="aside__cronogramaBtn">
+                <a href="./pages/cronograma.html">Ver el cronograma</a>
+            </div>
         </article>
-        <div class="aside__btn boton">
-            <a href="./pages/cronograma.html" class="boton">Ver el cronograma</a>
-        </div>
+        <article class="aside__notificacion">
+            <div>
+                <form action="active" class="aside2__form">
+                    <label for="news" ><strong>Notificaciones</strong></label>
+                    <input type="email" id="news" placeholder="Escriba su mail">
+                    <input type="submit" id="enviar" value="Enviar">
+                </form>
+            </div>
+            <img src="./img/gojo.jpg" alt="notificacion" class="aside2__img">       
+        </article>
     </aside>
-
-    <!-- fin del ASIDE1 -->
-
-    <!-- ASIDE2 -->
-    <aside id="aside2">
-        <div>
-            <form action="active" class="aside2__form">
-                <label for="news" ><strong>Notificaciones</strong></label>
-                <input type="email" id="news" placeholder="Escriba su mail">
-                <input type="submit" id="enviar" value="Enviar">
-            </form>
-        </div>
-        <img src="./img/gojo.jpg" alt="notificacion" class="aside2__img">       
-    </aside>
+    
+    
     
     <!-- FIN DEL ASIDE2 -->
     
@@ -139,14 +129,14 @@
     <section id="section">
         <article class="section__principal">
             <h3>Novedades</h3>
-            <div class="section__principal--img">
+            <div class="section__principalIMG">
                 <img src="./img/Chainsaw-Man.jpeg" alt="chain">
             </div>
          </article>
         
         <article class="section__noticias">
             <h3>Ultimas noticias</h3>
-            <div class="section__noticias--secu">
+            <div class="section__noticiasIMG">
                 <div>
                     <img src="../img/lafy.jpg" alt="luffy" class="luffy">
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, enim!</p>
@@ -160,7 +150,7 @@
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, enim!</p>
                 </div>
             </div>
-            <div class="section__btn">
+            <div class="section__noticiasBtn">
                 <a href="./pages/noticias.html" class="boton">Ver mas</a>
             </div>
         </article>
