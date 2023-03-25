@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SASS</title>
+    <link rel="stylesheet" href="./sass/main.css">
+</head>
+<body>
+    <header>
+        <div>
+            <span>logo</span>
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">menu1</a>
+                </li>
+                <li>
+                    <a href="#">menu2</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- BEM -->
+    <section class="producto">
+        <div class="producto__titulo">
+            <h2>Lorem ipsum dolor sit amet.</h2>
+        </div>
+        <div class="producto__info">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos eum aut voluptates laboriosam cumque impedit, eos error ullam. Explicabo sit labore, esse corporis tempore laboriosam perspiciatis assumenda fuga cum eligendi!</p>
+        </div>
+        <div class="producto__link">
+            <a href="#">ver mas</a>
+        </div>
+    </section>
+</body>
+</html>
+
+<!-- SASS es un procesador de css
+Se transforma,el codigo, en un archivo de css puro
+NESTING: Permite escribir un codigo basado en el termino de anidado de padre e hijo 
+
+"&" reemplaza al selector padre,se usa con el BEM y la pseudoclases
+SASS tiene 2 sintaxis: SCSS Y SASS
+1. mas exigente, no me permite escrbir css
+2. nos permite escribir ambas maneras, anidando selectores
+
+
+Al poner codigo sass, para iniciar el CSS apretar abajo "watching sass"
+El archivo css map no se toca
+La extension para un documento es ".SCSS"
+
+VARIABLES SASS
+Son una manera de guardar informacion en forma de dato. Cada vez que use ese dato puedo acceder a esa informacion
+Si se define por fuera de un selector es global
+si se define por dentro de un selector se dice que es local
+Se usa con el signo $
+
+PARTIALS
+Puede ser globales o locales
+Se puede crear archivos con este nombre "_x(nombre del archivo).scss"
+Estos sirven para partes del codigo que comparten la misma estructura o estilo, como el header,footer etc
+Deaspues en el main mediante @import "x(nombre del archivo)" se llama a las propiedades del archivo que llamamos
+
+OPERACIONES
+se puede hacer matematica
+
+DATA:
+Me permite escribir en un selector padre, un selector hijo
+Le da mas potencia a CSS
+Es necesario instalar 2 extensiones
+Sass de syler 
+Kive Sass Compiler
+//comentario no compliado en SASS
+
+-->
