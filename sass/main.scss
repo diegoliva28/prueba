@@ -1,3 +1,15 @@
+.boton{
+    padding: 10px;
+    text-decoration: none;
+    background-color: rgb(0, 225, 255);
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.5em;
+    &:hover{
+        background-color: rgb(21, 157, 175);
+    }
+}
+
 img{
     width: 200px;
 }
@@ -7,21 +19,79 @@ body{
     grid-template-areas: 
     "header header header"
     "main main aside"
-    "article article article"
+    "article article aside"
     "section section section"
     "footer footer footer";
 
     grid-template-columns:1fr 2fr 1fr ;
+    grid-template-rows: auto auto 0.8fr 1fr auto;
 }
 
 #header{
-    background-color: red;
+    border-bottom: 3px solid black;
+    background-color: rgb(14, 149, 211);
     grid-area: header;
+    display: grid;
+    grid-template-columns:1fr 3fr 1fr;
+    .header__logo{
+        align-self: center;
+        text-align: center;
+        h1{
+            font-size: 1.8em;
+            font-weight:500;
+        }
+        img{
+            width: 130px;
+        }
+    }
+    .header__nav{
+        ul{
+            height: 100%;
+            border-left: 3px solid black;
+            border-right: 3px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            gap: 20px;
+            list-style: none;
+            padding: 0%;
+            li{
+                a{
+                    color: black;
+                    font-size: 1.8em;
+                    font-weight: 500;
+                    text-decoration: none;
+                    &:hover{
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+    .header__login{
+        align-self: center;
+        padding:0 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        input{
+            margin: 0%;
+            border-radius: 10px;
+            font-size: 1.2em;
+        }
+    }
 }
 
 #main{
     background-color: blue;
     grid-area: main;
+    padding: 20px;
+    margin-bottom: 0%;
+    padding-bottom: 0%;
+    h3{
+        font-size:2em;
+    }
 }
 #article{
     background-color: green;
@@ -30,6 +100,39 @@ body{
 #aside{
     background-color: pink;
     grid-area: aside;
+    .aside__cronograma{
+        background-color: orange;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        h3{
+            font-size: 1.5em;
+        }
+        div{
+            display: flex;
+            gap: 10px;
+        }
+    }
+    .aside__notificacion{
+        background-color: grey;
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        div{
+            form{
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                label{
+                    font-size: 1em;
+                }
+            }
+        }
+        img{
+            padding:0 5px;
+            width:100% ;
+            height: 100%;
+        }
+    }
 }
 #section{
     background-color: yellow;
