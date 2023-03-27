@@ -1,0 +1,24 @@
+#footer{
+    padding: 10px 0;
+    background-color: rgb(14, 149, 211);
+    grid-area: footer;
+    text-align: center;
+    .footer__logo{
+        img{
+            width: 200px;
+        }
+    }
+    .footer__redes{
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        a{
+            text-decoration: none;
+        }
+    }
+    .footer__txt{
+        font-size: 1.2em;
+        line-height: 10px;
+    }
+}

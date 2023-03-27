@@ -10,10 +10,6 @@
   background-color: rgb(21, 157, 175);
 }
 
-img {
-  width: 200px;
-}
-
 body {
   background-color: rgb(160, 224, 237) !important;
   display: grid;
@@ -210,6 +206,9 @@ body {
   background-color: rgb(14, 149, 211);
   grid-area: footer;
   text-align: center;
+}
+#footer .footer__logo img {
+  width: 200px;
 }
 #footer .footer__redes {
   list-style: none;

@@ -1,0 +1,55 @@
+#aside{
+    grid-area: aside;
+    .aside__cronograma{
+        display: flex;
+        flex-direction: column;
+        h3{
+            padding: 10px;
+            font-size: 2em;
+            margin: 0%;
+            border-left: 3px solid black;
+        }
+        .crono__div{
+            background-color: rgb(62, 204, 220);
+            border: 3px solid black;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            div{
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+                img{
+                    width: 30%;
+                }
+            }
+        }
+        .aside__cronogramaBtn{
+            align-self: center;
+            margin: 15px 0;
+        }
+    }
+    .aside__notificacion{
+        border: 3px solid black;
+        background-color: rgb(62, 204, 220);
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+       .aside2__form{
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            label{
+                font-size: 1.5em;
+            }
+            #enviar{
+                width: 100px;
+            }
+            }
+       img{
+            width: 100%;
+            height: 100%;
+        }
+   }
+}

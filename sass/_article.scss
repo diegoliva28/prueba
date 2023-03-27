@@ -1,0 +1,27 @@
+#article{
+    grid-area: article;
+    padding: 0 20px;
+    .article__mobile{
+        display: none;
+    }
+    .article__series{
+        display: flex;
+        flex-direction: column;
+        h3{
+            font-size: 2em;
+        }
+        .article__seriesIMG{
+            display: flex;
+            flex-flow: row wrap;
+            gap: 20px;
+            img{
+                border-radius: 10px;
+                width: 32%;
+            }
+        }
+        .article__btn{
+            margin: 15px 0;
+            align-self: center;
+        }
+    }
+}
