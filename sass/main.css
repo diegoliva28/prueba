@@ -18,7 +18,7 @@ body {
   display: grid;
   grid-template-areas: "header header header" "main main aside" "article article aside" "section section section" "footer footer footer";
   grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: auto auto 0.8fr 1fr auto;
+  grid-template-rows: repeat(5, auto);
 }
 
 #header {
@@ -53,7 +53,7 @@ body {
 #header .header__nav ul li a {
   color: black;
   font-size: 1.8em;
-  font-weight: 500;
+  font-weight: 450;
   text-decoration: none;
 }
 #header .header__nav ul li a:hover {
@@ -77,56 +77,71 @@ body {
   background-color: blue;
   grid-area: main;
   padding: 20px;
-  margin-bottom: 0%;
-  padding-bottom: 0%;
 }
 #main h3 {
-  font-size: 2em;
+  font-size: 3em;
 }
 
 #article {
-  background-color: green;
   grid-area: article;
+  background-color: green;
 }
 
 #aside {
-  background-color: pink;
   grid-area: aside;
 }
 #aside .aside__cronograma {
-  background-color: orange;
-  padding: 10px;
   display: flex;
   flex-direction: column;
 }
 #aside .aside__cronograma h3 {
-  font-size: 1.5em;
+  padding: 10px;
+  font-size: 2em;
+  margin: 0%;
+  border-left: 3px solid black;
 }
-#aside .aside__cronograma div {
+#aside .aside__cronograma .crono__div {
+  background-color: rgb(62, 204, 220);
+  border: 3px solid black;
+  padding: 10px;
   display: flex;
+  flex-direction: column;
   gap: 10px;
 }
-#aside .aside__notificacion {
-  background-color: grey;
-  display: grid;
-  grid-template-columns: 1.5fr 1fr;
+#aside .aside__cronograma .crono__div div {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
 }
-#aside .aside__notificacion div form {
+#aside .aside__cronograma .aside__cronogramaBtn {
+  align-self: center;
+  margin: 15px 0;
+}
+#aside .aside__notificacion {
+  border: 3px solid black;
+  background-color: rgb(62, 204, 220);
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+#aside .aside__notificacion .aside2__form {
+  padding: 10px;
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
-#aside .aside__notificacion div form label {
-  font-size: 1em;
+#aside .aside__notificacion .aside2__form label {
+  font-size: 1.5em;
+}
+#aside .aside__notificacion .aside2__form #enviar {
+  width: 100px;
 }
 #aside .aside__notificacion img {
-  padding: 0 5px;
   width: 100%;
   height: 100%;
 }
 
 #section {
-  background-color: yellow;
+  background-color: rgba(199, 199, 0, 0.775);
   grid-area: section;
 }
 
