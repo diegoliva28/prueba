@@ -15,6 +15,7 @@ img{
 }
 
 body{
+    background-color: rgb(160, 224, 237) !important;
     display: grid;
     grid-template-areas: 
     "header header header"
@@ -84,7 +85,6 @@ body{
 }
 
 #main{
-    background-color: blue;
     grid-area: main;
     padding: 20px;
     h3{
@@ -93,7 +93,6 @@ body{
 }
 #article{
     grid-area: article;
-    background-color: green;
     padding: 0 20px;
     .article__mobile{
         display: none;
@@ -175,7 +174,6 @@ body{
    }
 }
 #section{
-    background-color: rgba(199, 199, 0, 0.775);
     grid-area: section;
     padding: 20px;
     display: grid;
@@ -193,7 +191,6 @@ body{
     }
     .section__noticias{
         padding-top: 15px;
-        background-color: greenyellow;
         display: flex;
         flex-direction: column;
         .section__noticiasIMG{
@@ -220,7 +217,7 @@ body{
 }
 #footer{
     padding: 10px 0;
-    background-color: teal;
+    background-color: rgb(14, 149, 211);
     grid-area: footer;
     text-align: center;
     .footer__redes{
@@ -242,24 +239,106 @@ body{
 
  @media (max-width:560px) {
     body{
-        display: grid;
         grid-template-areas:
         "header"
         "article"
         "section"
         "aside"
         "footer";
+        grid-template-columns: 1fr;
 /*         grid-template-rows: repeat(5,auto)
  */    }
     #main{
         display: none;
     }
     #header{
-        
+        border: none;
+        display: flex;
+        flex-direction: column;
+        .header__logo{
+            padding: 5px 0;
+            h1{
+                font-size: 1em;
+            }
+            img{
+                width: 100px;
+            }
+        }
+        .header__nav{
+          ul{
+            border: none;
+            margin: 0%;
+            gap: 0;
+            li{
+                padding: 5px;
+                border:2px solid black;
+                background-color: rgb(8, 191, 191);
+                width: 100%;
+                text-align: center;
+                a{
+                    font-size: 1em;
+                }
+            }
+          }
+        }
+        .header__login{
+            display: none;
+        }
+    }
+
+    #article{
+        .article__mobile{
+            display: block;
+            font-size: 2em;
+            margin: 10px 0;
+        }
+        .article__series{
+            h3{
+                display: none;
+            }
+            .article__seriesIMG{
+                img{
+                    width: 250px;
+                }
+            }
+        }
+    }
+    #section{
+        display: flex;
+        flex-direction: column;
     }
     #aside{
         .aside__cronograma{
             display: none;
         }
+        .aside__notificacion{
+            margin:10px 20px;
+        }
+    }
+    #footer{
+        padding: 10px;
+        display: grid;
+        grid-template-areas: 
+        "logo redes"
+        "logo txt";
+        .footer__logo{
+            grid-area: logo;
+            img{
+                width: 150px;
+            }
+        }
+        .footer__redes{
+            grid-area: redes;
+            padding: 10px;
+        }
+        .footer__txt{
+            grid-area: txt;
+            p{
+                font-size: 0.9em;
+            }
+        }
+    }
+    .boton{
+        padding: 5px;
     }
  }
