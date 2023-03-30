@@ -1,9 +1,14 @@
+@import "mixins";
+@import "variables";
+
 #main{
     grid-area: main;
     padding: 20px;
     h3{
         font-size:3em;
     }
+
+    @include noMobile
 }
 
 //con el nombre main no me dejo cargar el import 

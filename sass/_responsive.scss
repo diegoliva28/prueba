@@ -1,6 +1,8 @@
 /* RESPONSIVE */
 
-@media (max-width:560px) {
+@import "variables";
+
+@media (max-width:$mobile) {
     body{
         grid-template-areas:
         "header"
@@ -11,9 +13,7 @@
         grid-template-columns: 1fr;
 /*         grid-template-rows: repeat(5,auto)
  */    }
-    #main{
-        display: none;
-    }
+  
     #header{
         border: none;
         display: flex;
@@ -34,8 +34,8 @@
             gap: 0;
             li{
                 padding: 5px;
-                border:2px solid black;
-                background-color: rgb(8, 191, 191);
+                border:$border;
+                background:map-get($back-color, mobile );
                 width: 100%;
                 text-align: center;
                 a{
@@ -56,9 +56,7 @@
             margin: 10px 0;
         }
         .article__series{
-            h3{
-                display: none;
-            }
+        
             .article__seriesIMG{
                 img{
                     width: 250px;
@@ -71,9 +69,6 @@
         flex-direction: column;
     }
     #aside{
-        .aside__cronograma{
-            display: none;
-        }
         .aside__notificacion{
             margin:10px 20px;
         }

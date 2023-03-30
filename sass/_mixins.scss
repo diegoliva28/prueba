@@ -1,0 +1,7 @@
+@import "variables";
+
+@mixin  noMobile{
+    @media (max-width:#{$mobile}) {
+        display: none;
+    }
+}

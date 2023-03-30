@@ -1,3 +1,6 @@
+@import "mixins";
+@import "variables";
+
 #article{
     grid-area: article;
     padding: 0 20px;
@@ -9,13 +12,14 @@
         flex-direction: column;
         h3{
             font-size: 2em;
+            @include noMobile
         }
         .article__seriesIMG{
             display: flex;
             flex-flow: row wrap;
             gap: 20px;
             img{
-                border-radius: 10px;
+                border-radius: $radius;
                 width: 32%;
             }
         }

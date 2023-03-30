@@ -1,17 +1,22 @@
+@import "mixins";
+
+@import "variables";
+
 #aside{
     grid-area: aside;
     .aside__cronograma{
         display: flex;
         flex-direction: column;
+        @include noMobile;
         h3{
             padding: 10px;
             font-size: 2em;
             margin: 0%;
-            border-left: 3px solid black;
+            border-left: $border;
         }
         .crono__div{
-            background-color: rgb(62, 204, 220);
-            border: 3px solid black;
+            background:map-get($back-color, asiCrono );
+            border: $border;
             padding: 10px;
             display: flex;
             flex-direction: column;
@@ -31,8 +36,8 @@
         }
     }
     .aside__notificacion{
-        border: 3px solid black;
-        background-color: rgb(62, 204, 220);
+        border: $border;
+        background-color:map-get($back-color, asiNoti );
         display: grid;
         grid-template-columns: 2fr 1fr;
        .aside2__form{
